@@ -1,0 +1,25 @@
+.megasena{
+    color:#209869;
+}
+
+.lotofacil{
+    color:#930089;
+    
+}
+
+.quina{
+    color:#260085;
+}
+
+.ativo{
+    color: #aaa;
+    pointer-events: none;
+}
+
+.botao{
+    font-size: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: roboto;
+}
