@@ -1,19 +1,24 @@
 import { useLoteria } from "../../hooks";
 import "./index.css";
 import trevo from "../../assets/trevo-quina.png";
-import { Carregando, Direita, Esquerda, Principal, Resultado } from "../../components";
+import {
+  Carregando,
+  Direita,
+  Esquerda,
+  Principal,
+  Resultado,
+  NomeLoteria,
+} from "../../components";
 
 export default function Quina() {
-  const { quina:sorteio } = useLoteria();
+  const { quina: sorteio } = useLoteria();
   return (
     <>
       {sorteio.dataApuracao ? (
         <Principal>
           <Esquerda>
-            <div className="quina-bloco-loteria">
-              <img src={trevo} alt="quina" />
-              <span className="quina-nome-loteria">QUINA</span>
-            </div>
+          <NomeLoteria trevo={trevo} nome={"QUINA"}/>
+
             <div className="quina-bloco-estimativa">
               <div className="quina-texto-estimativa">
                 Estimativa de prêmio do próximo concurso. Sorteio em{" "}
@@ -28,7 +33,7 @@ export default function Quina() {
             </div>
           </Esquerda>
           <Direita>
-            <Resultado dezenas={sorteio.dezenas}/>
+            <Resultado dezenas={sorteio.dezenas} />
             <div className="quina-texto-acumulou">
               {sorteio.acumulado ? "ACUMULOU!" : "NÃO ACUMULOU"}
             </div>

@@ -1,7 +1,7 @@
 import { useLoteria } from "../../hooks";
 import "./index.css";
 import trevo from "../../assets/trevo-megasena.png";
-import { Carregando, Direita, Esquerda, Principal, Resultado } from "../../components";
+import { Carregando, Direita, Esquerda, Estimativa, NomeLoteria, Principal, Resultado } from "../../components";
 
 export default function Megasena() {
   const { megasena:sorteio } = useLoteria();
@@ -10,10 +10,8 @@ export default function Megasena() {
       {sorteio.dataApuracao ? (
         <Principal>
           <Esquerda>
-            <div className="mega-bloco-loteria">
-              <img src={trevo} alt="Megasena" />
-              <span className="mega-nome-loteria">MEGA-SENA</span>
-            </div>
+            <NomeLoteria trevo={trevo} nome="MEGA-SENA"/>
+            <Estimativa dataProximoConcurso={sorteio.dataProximoConcurso} valorEstimadoProximoConcurso={sorteio.valorEstimadoProximoConcurso} />
             <div className="mega-bloco-estimativa">
               <div className="mega-texto-estimativa">
                 Estimativa de prêmio do próximo concurso. Sorteio em{" "}
