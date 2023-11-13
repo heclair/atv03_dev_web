@@ -24,8 +24,8 @@ const Sld = styled.div`
 const BolaSld = styled.div`
     font-size: 18px;
     font-weight: bold;
-    background-color: #260085;
-    color: #fff;
+    background-color: ${props => props.theme.bola};
+    color: ${props => props.theme.bolafonte};
     border-radius: 25px;
     padding: 10px;
     margin: 0px 10px;
