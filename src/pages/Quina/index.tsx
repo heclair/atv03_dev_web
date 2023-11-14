@@ -8,6 +8,8 @@ import {
   Principal,
   Resultado,
   NomeLoteria,
+  Estimativa,
+  Acumulou,
 } from "../../components";
 
 export default function Quina() {
@@ -18,25 +20,15 @@ export default function Quina() {
         <Principal>
           <Esquerda>
           <NomeLoteria trevo={trevo} nome={"QUINA"}/>
-
-            <div className="quina-bloco-estimativa">
-              <div className="quina-texto-estimativa">
-                Estimativa de prêmio do próximo concurso. Sorteio em{" "}
-                {sorteio.dataApuracao}
-              </div>
-              <div className="quina-valor-estimativa">
-                {sorteio.valorEstimadoProximoConcurso.toLocaleString("pt-br", {
-                  style: "currency",
-                  currency: "brl",
-                })}
-              </div>
-            </div>
+          <Estimativa dataProximoConcurso={sorteio.dataProximoConcurso} valorEstimadoProximoConcurso={sorteio.valorEstimadoProximoConcurso} />
+          <Esquerda>
+         
+            <Estimativa dataProximoConcurso={sorteio.dataProximoConcurso} valorEstimadoProximoConcurso={sorteio.valorEstimadoProximoConcurso} />
+          </Esquerda>
           </Esquerda>
           <Direita>
             <Resultado dezenas={sorteio.dezenas} />
-            <div className="quina-texto-acumulou">
-              {sorteio.acumulado ? "ACUMULOU!" : "NÃO ACUMULOU"}
-            </div>
+            <Acumulou quantidadeGanhadores={sorteio.quantidadeGanhadores} />
             <div className="quina-data-concurso">
               {`Concurso ${sorteio.numeroDoConcurso} - ${sorteio.dataPorExtenso}`}
             </div>

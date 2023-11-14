@@ -39,6 +39,8 @@ const TextoSld = styled.div`
 `;
 
 const ValorSld = styled.div`
-  font-size: 15px;
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
   color: ${(props) => props.theme.estimativa};
 `;
