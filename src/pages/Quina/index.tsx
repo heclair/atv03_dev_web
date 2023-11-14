@@ -1,5 +1,5 @@
 import { useLoteria } from "../../hooks";
-import "./index.css";
+
 import trevo from "../../assets/trevo-quina.png";
 import {
   Carregando,

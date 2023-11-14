@@ -1,5 +1,4 @@
 import { useLoteria } from "../../hooks";
-import "./index.css";
 import trevo from "../../assets/trevo-timemania.png";
 import {
   Acumulou,
