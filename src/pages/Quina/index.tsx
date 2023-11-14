@@ -22,10 +22,7 @@ export default function Quina() {
           <Esquerda>
           <NomeLoteria trevo={trevo} nome={"QUINA"}/>
           <Estimativa dataProximoConcurso={sorteio.dataProximoConcurso} valorEstimadoProximoConcurso={sorteio.valorEstimadoProximoConcurso} />
-          <Esquerda>
-         
-            <Estimativa dataProximoConcurso={sorteio.dataProximoConcurso} valorEstimadoProximoConcurso={sorteio.valorEstimadoProximoConcurso} />
-          </Esquerda>
+
           </Esquerda>
           <Direita>
             <Resultado dezenas={sorteio.dezenas} />

@@ -19,7 +19,7 @@ quantidadeGanhadores}: Props) {
 const Sld = styled.div`
 font-size: 20px;
 font-weight: bold;
-color: ${(props) => props.theme.acumulous};
+color: ${(props) => props.theme.acumulou};
 margin-top: 15px;
 padding-left: 15px;
 `;
