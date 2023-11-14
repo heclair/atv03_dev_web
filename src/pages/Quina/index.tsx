@@ -10,6 +10,7 @@ import {
   NomeLoteria,
   Estimativa,
   Acumulou,
+  Data,
 } from "../../components";
 
 export default function Quina() {
@@ -29,9 +30,10 @@ export default function Quina() {
           <Direita>
             <Resultado dezenas={sorteio.dezenas} />
             <Acumulou quantidadeGanhadores={sorteio.quantidadeGanhadores} />
-            <div className="quina-data-concurso">
-              {`Concurso ${sorteio.numeroDoConcurso} - ${sorteio.dataPorExtenso}`}
-            </div>
+            <Data
+              numeroDoConcurso={sorteio.numeroDoConcurso}
+              dataPorExtenso={sorteio.dataPorExtenso}
+            />
           </Direita>
         </Principal>
       ) : (

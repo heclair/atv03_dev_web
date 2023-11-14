@@ -3,23 +3,17 @@ import { HtmlHTMLAttributes } from "react";
 import { sortAndDeduplicateDiagnostics } from "typescript";
 
 interface Props {
-  quantidadeGanhadores: number;
+  numeroDoConcurso: number;
+  dataPorExtenso: string;
 }
 
-export default function Acumulou({
-quantidadeGanhadores}: Props) {
-  return (
-    <Sld>
-        {quantidadeGanhadores === 0 ? "ACUMULOU"
-        : `${quantidadeGanhadores} GANHADORES`}
-    </Sld>
-  );
+export default function Data({ numeroDoConcurso, dataPorExtenso }: Props) {
+  return <Sld>{`Concurso ${numeroDoConcurso} - ${dataPorExtenso}`}</Sld>;
 }
 
 const Sld = styled.div`
-font-size: 20px;
-font-weight: bold;
-color: ${(props) => props.theme.acumulous};
-margin-top: 15px;
-padding-left: 15px;
+  margin-top: 15px;
+  color: ${(props) => props.theme.data};
+  padding-left: 15px;
+  font-size: 15px;
 `;

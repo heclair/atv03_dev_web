@@ -13,14 +13,14 @@ import {
   Resultado,
 } from "../../components";
 
-export default function Megasena() {
-  const { megasena: sorteio } = useLoteria();
+export default function Timemania() {
+  const { timemania: sorteio } = useLoteria();
   return (
     <>
       {sorteio.dataApuracao ? (
         <Principal>
           <Esquerda>
-            <NomeLoteria trevo={trevo} nome="MEGA-SENA" />
+            <NomeLoteria trevo={trevo} nome="TIMEMANIA" />
             <Estimativa
               dataProximoConcurso={sorteio.dataProximoConcurso}
               valorEstimadoProximoConcurso={
